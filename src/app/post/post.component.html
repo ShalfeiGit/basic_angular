@@ -1,0 +1,22 @@
+<div [ngStyle]="{backgroundColor: countValue ? 'green' : 'red'}" [ngClass]="{border: countValue}">
+  <input type="title" [placeholder]="titlePlaceholder" (input)="handleTitle($event)" [value]="titleValue"/>
+  <br />
+  <input type="text" #inputText [placeholder]="textPlaceholder" (input)="handleText(inputText.value)" [value]="textValue"/>
+  <br />
+  <input type="number" #inputText [placeholder]="countPlaceholder" [(ngModel)]="countValue" />
+  <br />
+  <button *ngIf="countValue" (click)="handleButtonClick1()">Toggle button 1</button>
+  <button *ngIf="!countValue" (click)="handleButtonClick2()">Toggle button 2</button>
+  <div *ngIf="countValue; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock><div>Content to render when condition is true.</div></ng-template>
+  <ng-template #elseBlock><div>Content to render when condition is false.</div></ng-template>
+  <div [ngSwitch]="toggle">
+    <p *ngSwitchCase="true">true content</p>
+    <p *ngSwitchCase="false" >false content</p>
+    <p *ngSwitchDefault>default content</p>
+  </div>
+  <div *ngFor="let item of array; let ind = index">
+    <div>№{{ind}}-{{item}}</div>
+  </div>
+  <div>{{showNowTime | date: 'shortDate'}}</div>
+</div>

@@ -1,0 +1,6 @@
+<div><h1>Что-то пошло не так</h1></div>
+<div><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Ссылка на главную старницу</a></div>
+<div><a [routerLink]="['/error-page']" routerLinkActive="active">Ссылка на текущую страницу</a></div>
+<div><a [routerLink]="['/error-page', 'test-nested-page']" routerLinkActive="active">Ссылка на текущую вложнную страницу</a></div>
+<button nz-button nzType="primary" style="margin: 8px" (click)="handleRedirectToStartPage()">Вернуться на article</button>
+<router-outlet></router-outlet>

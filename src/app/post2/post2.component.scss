@@ -1,0 +1,11 @@
+.post {
+  &__element{
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    max-width: 200px;
+  }
+  &__button{
+    margin-right: 4px;
+  }
+}

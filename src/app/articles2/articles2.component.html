@@ -1,0 +1,5 @@
+<div *ngIf="postIdFromLocation">Id из url: {{postIdFromLocation}}</div>
+<div *ngIf="likeFromLocation">query из url: {{likeFromLocation}}</div>
+<div *ngIf="fragmentFromLocation">fragment из url: {{fragmentFromLocation}}</div>
+<app-post2 [posts]="posts" (addPost)="addPost($event)" (clearPosts)="clearPosts()"><div #divElement>Форма регистрациии поста</div></app-post2>
+<app-article2 *ngFor="let post of posts" [post]="post" ></app-article2>

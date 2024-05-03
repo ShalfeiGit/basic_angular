@@ -1,0 +1,14 @@
+<div class="post__element" >
+  <ng-content></ng-content>
+</div>
+<div class="post__element" >
+  <input #inputTitleElement nz-input placeholder="input title" (input)="inputTitle($event)" />
+</div>
+<div class="post__element">
+  <textarea #inputTextElement nz-input placeholder="input text" (input)="inputText($event)" ></textarea>
+</div>
+<div class="post__element">
+  <button nz-button nzType="primary" class="post__button" (click)="handleClickButton()" >Send post</button>
+  <button nz-button nzType="primary" class="post__button" (click)="handleClearButton()" >Clear posts</button>
+  <button nz-button nzType="primary" class="post__button" (click)="handleFocusElement()" >Focus post</button>
+</div>
